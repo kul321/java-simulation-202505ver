@@ -55,5 +55,6 @@ End-of-day summaries include total sales, satisfaction changes, employee wages, 
 > it reflects how real-world business logic can be implemented with object-oriented design and clean logic.
 
 
+
 ## Author
 - GitHub: [kul321](https://github.com/kul321)

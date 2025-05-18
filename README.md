@@ -26,6 +26,10 @@ Each project was designed to:
 - Improve algorithmic thinking and program structure
 - Practice real-world system modeling through simulation
 
+## 🧩 Class Diagram
+
+![Class Diagram](./CoffeeShop/screenshots/CoffeeShop_ClassDiagram.png)
+
 ---
 
 > 👤 GitHub: [kul321](https://github.com/kul321)
