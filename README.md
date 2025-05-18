@@ -1,23 +1,30 @@
 # 💻 Java Simulation Projects – 2025 Portfolio
 
-This repository showcases my console-based Java projects designed to simulate real-world systems using object-oriented programming principles.
+This repository showcases multiple Java-based console simulation projects, created to demonstrate object-oriented design, logical thinking, and real-world modeling.
 
-## 📁 Projects Included
+## 📁 Included Projects
 
 | Project | Description |
 |--------|-------------|
-| [CoffeeShop](./CoffeeShop) | Simulates coffee shop management, customer satisfaction, weather effects, and upgrade systems |
-| BookStore | Book inventory and sales system (to be organized) |
-| Energy | Power usage simulation (to be organized) |
-| RobotPath | Robot navigation on a grid map (to be organized) |
+| [CoffeeShop](./CoffeeShop) | ☕ A coffee shop simulation with customer satisfaction, recipes, and weather effects |
+| [BookStore](./BookStore) | 📚 A bookstore inventory and sales system with CRUD functionality |
+| [CustomizingRPGCharacter](./CustomizingRPGCharacter) | 🧙‍♂️ RPG character and skill customization using modular class design |
+| [Energy](./Energy) | ⚡ Turn-based energy transfer and validation simulation between zones and players |
+| [RobotPath](./RobotPath) | 🤖 Simple 2D robot movement and direction simulation |
+| [Student](./Student) | 🎓 Basic student record management system (add, view, delete) |
 
 ## 🛠 Tech Stack
-- Java (JDK 17)
-- IntelliJ IDEA
-- Git/GitHub
 
-## ✨ Purpose
-Each project was created to improve my understanding of class structure, object interaction, and logical flow in console-based Java programs.
+- Java (JDK 17)
+- Console-based (CLI) interaction
+- IntelliJ IDEA
+
+## 💡 Purpose
+
+Each project was designed to:
+- Reinforce core object-oriented programming concepts
+- Improve algorithmic thinking and program structure
+- Practice real-world system modeling through simulation
 
 ---
 
