@@ -49,7 +49,7 @@ End-of-day summaries include total sales, satisfaction changes, employee wages, 
 
 ![Daily Summary](./screenshots/Coffee4.jpg)
 
-> This project is more than a simulation — it's a miniature tycoon game built inside the Java console.
+> This project is a miniature tycoon game built inside the Java console.
 >
 > By modeling customer behavior, dynamic weather effects, satisfaction-driven demand, and research upgrades,  
 > it reflects how real-world business logic can be implemented with object-oriented design and clean logic.
