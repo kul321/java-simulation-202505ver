@@ -91,7 +91,7 @@ public class StudentManager {
 
 
         Student student = searchStudentByIdNumber(number);
-        if(student.)
+
 
 
         switch(sector){
