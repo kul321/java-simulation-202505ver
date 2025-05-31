@@ -124,12 +124,12 @@ public class ShopManager {
         coldAmericanoRecipe.addIngredient("커피콩", 1);
         coldAmericanoRecipe.addIngredient("물", 1);
         coldAmericanoRecipe.addIngredient("얼음", 1);
-        coffeeShop.addMenuItem(new MenuItem("아이스 아메리카노", 3500, 0, "커피",coldAmericanoRecipe,"보통",true));
+        coffeeShop.addMenuItem(new MenuItem("아이스 아메리카노", 3500, 0, "커피", coldAmericanoRecipe, "보통", true));
 
         Recipe hotAmericanoRecipe = new Recipe();
         hotAmericanoRecipe.addIngredient("커피콩", 1);
         hotAmericanoRecipe.addIngredient("물", 1);
-        coffeeShop.addMenuItem(new MenuItem("따뜻한 아메리카노", 3000, 0,"커피", hotAmericanoRecipe, "보통", true));
+        coffeeShop.addMenuItem(new MenuItem("따뜻한 아메리카노", 3000, 0, "커피", hotAmericanoRecipe, "보통", true));
 
 
         Recipe adeRecipe = new Recipe();
@@ -142,7 +142,7 @@ public class ShopManager {
         Recipe iceTeaRecipe = new Recipe();
         iceTeaRecipe.addIngredient("차", 1);
         iceTeaRecipe.addIngredient("얼음", 1);
-        coffeeShop.addMenuItem(new MenuItem("아이스티", 3500, 0, "차", iceTeaRecipe,"보통", true));
+        coffeeShop.addMenuItem(new MenuItem("아이스티", 3500, 0, "차", iceTeaRecipe, "보통", true));
 
         // 음식 메뉴
 
@@ -150,14 +150,14 @@ public class ShopManager {
         sandwichRecipe.addIngredient("빵", 2);
         sandwichRecipe.addIngredient("치즈", 1);
         sandwichRecipe.addIngredient("버터", 1);
-        coffeeShop.addMenuItem(new MenuItem("기본 샌드위치", 5500, 1, "샌드위치", sandwichRecipe,"보통", true));
+        coffeeShop.addMenuItem(new MenuItem("기본 샌드위치", 5500, 1, "샌드위치", sandwichRecipe, "보통", true));
 
         Recipe hotdogRecipe = new Recipe();
         hotdogRecipe.addIngredient("빵", 1);
         hotdogRecipe.addIngredient("소시지", 1);
         hotdogRecipe.addIngredient("케찹", 1);
         hotdogRecipe.addIngredient("마요네즈", 1);
-        coffeeShop.addMenuItem(new MenuItem("기본 핫도그", 4000, 1,"핫도그",hotdogRecipe, "보통",true));
+        coffeeShop.addMenuItem(new MenuItem("기본 핫도그", 4000, 1, "핫도그", hotdogRecipe, "보통", true));
     }
 
 
@@ -393,7 +393,7 @@ public class ShopManager {
         int baseCustomerCount = r.nextInt(16) + 5;  // 기본 손님수 5~20
         double weatherMultiplier = todayWeather.customerMultiplier;
         double satisfactionMultiplier = satisfaction.getCustomerMultiplier();
-        return (int)(baseCustomerCount * weatherMultiplier * satisfactionMultiplier);
+        return (int) (baseCustomerCount * weatherMultiplier * satisfactionMultiplier);
     }
 
     // 일일 정보 표시
@@ -662,7 +662,7 @@ public class ShopManager {
             }
 
             if (bonusMultiplier > 0) {
-                int itemBonus = (int)(item.price * bonusMultiplier);
+                int itemBonus = (int) (item.price * bonusMultiplier);
                 qualityRevenueBonus += itemBonus;
                 coffeeShop.money += itemBonus;
                 coffeeShop.dailyRevenue += itemBonus;
@@ -774,7 +774,7 @@ public class ShopManager {
         System.out.println("=== 게임 결과 ===");
         System.out.println("30일 동안 커피숍을 성공적으로 운영했습니다!");
         System.out.println("최종 자금: " + coffeeShop.money + "원");
-        System.out.println("최종 만족도: " + satisfaction.satisfaction );
+        System.out.println("최종 만족도: " + satisfaction.satisfaction);
         System.out.println("총 매출: " + coffeeShop.totalRevenue + "원");
     }
 
@@ -793,21 +793,21 @@ public class ShopManager {
         }
     }
 
-    public void selectWeather(){
+    public void selectWeather() {
         int weatherType = r.nextInt(6);
         todayWeather = new Weather(weatherType);
         System.out.println("오늘의 날씨: " + todayWeather.name);
     }
 
-    public void showEmployees(){
-        if(totalEmployees.isEmpty()){
+    public void showEmployees() {
+        if (totalEmployees.isEmpty()) {
             System.out.println("고용된 직원이 없습니다.");
             return;
         }
 
-        for(int i = 0; i<totalEmployees.size(); i++){
+        for (int i = 0; i < totalEmployees.size(); i++) {
             Employee emp = totalEmployees.get(i);
-            System.out.println((i+1)+". " + emp.name + (emp.isWorking ? "[근무중]" : "[비번]"));
+            System.out.println((i + 1) + ". " + emp.name + (emp.isWorking ? "[근무중]" : "[비번]"));
         }
     }
 
@@ -888,7 +888,6 @@ public class ShopManager {
             System.out.println("해고를 취소했습니다.");
         }
     }
-
 
 
     public void setWorkers() {
@@ -972,50 +971,50 @@ public class ShopManager {
         }
     }
 
-    public List<String> generateCustomerPreferences(){
+    public List<String> generateCustomerPreferences() {
         List<String> preferences = new ArrayList<>();
 
         //날씨 기반 선호도
-        if(todayWeather.type == Weather.HOT || todayWeather.type == Weather.SUNNY){
+        if (todayWeather.type == Weather.HOT || todayWeather.type == Weather.SUNNY) {
             preferences.add("아이스");
             preferences.add("에이드");
-        } else if (todayWeather.type == Weather.COLD || todayWeather.type == Weather.RAINY || todayWeather.type == Weather.SNOWY){
+        } else if (todayWeather.type == Weather.COLD || todayWeather.type == Weather.RAINY || todayWeather.type == Weather.SNOWY) {
             preferences.add("따뜻한");
             preferences.add("핫");
         }
 
         //랜덤
-        String[] drinkTypes = {"아메리카노","라떼","카푸치노","에스프레소","녹차","초코"};
-        String[] foodTypes = {"베이글","샌드위치", "핫도그"};
+        String[] drinkTypes = {"아메리카노", "라떼", "카푸치노", "에스프레소", "녹차", "초코"};
+        String[] foodTypes = {"베이글", "샌드위치", "핫도그"};
 
         //음료 1-2개 선택
-        int drinkPrefs = r.nextInt(2)+1;
-        for(int i=0; i<drinkPrefs; i++){
+        int drinkPrefs = r.nextInt(2) + 1;
+        for (int i = 0; i < drinkPrefs; i++) {
             preferences.add(drinkTypes[r.nextInt(drinkTypes.length)]);
         }
 
         //음식 좋아할 확률
-        if(r.nextDouble()<0.4){
-    preferences.add(foodTypes[r.nextInt(foodTypes.length)]);
+        if (r.nextDouble() < 0.4) {
+            preferences.add(foodTypes[r.nextInt(foodTypes.length)]);
         }
         return preferences;
     }
 
     //손님에게 제공할 메뉴 선택
-    public List<MenuItem> selectMenuForCustomer(List<MenuItem> possibleOrders, List<String> customerPreferences){
+    public List<MenuItem> selectMenuForCustomer(List<MenuItem> possibleOrders, List<String> customerPreferences) {
         System.out.println("===메뉴===");
-        for(int i=0; i<possibleOrders.size(); i++){
+        for (int i = 0; i < possibleOrders.size(); i++) {
             MenuItem item = possibleOrders.get(i);
             boolean isPreferred = false;
 
             //선호 메뉴
-            for(String pref : customerPreferences){
-                if(item.name.contains(pref)){
+            for (String pref : customerPreferences) {
+                if (item.name.contains(pref)) {
                     isPreferred = true;
                     break;
                 }
             }
-            System.out.println((i+1) + ". " + item.name + " (" + item.price + "원)" + (isPreferred ? " [선호]" : ""));
+            System.out.println((i + 1) + ". " + item.name + " (" + item.price + "원)" + (isPreferred ? " [선호]" : ""));
         }
 
         List<MenuItem> selectedItems = new ArrayList<>();
@@ -1024,16 +1023,16 @@ public class ShopManager {
         System.out.println("손님에게 어떤 메뉴를 제공하시겠습니까? (완료 시 0 입력)");
 
 
-        while(selecting){
+        while (selecting) {
             System.out.println("메뉴 번호 선택(0: 완료): ");
             int choice = sc.nextInt();
             sc.nextLine();
 
-            if(choice == 0){
+            if (choice == 0) {
                 selecting = false;
             }
-            if(choice >= 1 && choice <=possibleOrders.size()){
-                MenuItem selected = possibleOrders.get(choice -1);
+            if (choice >= 1 && choice <= possibleOrders.size()) {
+                MenuItem selected = possibleOrders.get(choice - 1);
                 selectedItems.add(selected);
                 // 선택한 메뉴의 선호도 확인 및 피드백
                 boolean isPreferred = checkItemPreference(selected, customerPreferences);
@@ -1075,7 +1074,7 @@ public class ShopManager {
 
     // 정확한 메뉴 선택 로직
     public List<MenuItem> selectAccurateMenu(Employee employee, List<MenuItem> possibleOrders,
-                                              List<String> customerPreferences, double serviceQuality) {
+                                             List<String> customerPreferences, double serviceQuality) {
         List<MenuItem> selectedItems = new ArrayList<>();
 
         // 선호도와 직원 전문성에 맞는 메뉴 분류
@@ -1137,7 +1136,7 @@ public class ShopManager {
 
     // 부정확한 랜덤 메뉴 선택
     public List<MenuItem> selectRandomMenu(Employee employee, List<MenuItem> possibleOrders,
-                                            List<String> customerPreferences) {
+                                           List<String> customerPreferences) {
         List<MenuItem> selectedItems = new ArrayList<>();
         MenuItem randomItem = possibleOrders.get(r.nextInt(possibleOrders.size()));
         selectedItems.add(randomItem);
@@ -1182,7 +1181,7 @@ public class ShopManager {
 
     // 고품질 아이템 선택 시도
     public MenuItem trySelectPremiumItem(List<MenuItem> preferredItems, List<MenuItem> typeMatchedItems,
-                                          Employee employee, double serviceQuality) {
+                                         Employee employee, double serviceQuality) {
         // 선호도와 타입이 모두 일치하는 아이템 중 고품질 아이템 찾기
         for (MenuItem item : preferredItems) {
             if (typeMatchedItems.contains(item) && serviceQuality > 0.6) {
@@ -1268,7 +1267,7 @@ public class ShopManager {
 
     // 추가 메뉴 제안
     public void suggestAdditionalItem(List<MenuItem> selectedItems, List<MenuItem> possibleOrders,
-                                       List<String> customerPreferences, Employee employee) {
+                                      List<String> customerPreferences, Employee employee) {
         // 이미 선택된 메뉴의 타입 확인
         int selectedType = selectedItems.get(0).type;
 
@@ -1538,5 +1537,24 @@ public class ShopManager {
     }
 
 
+    public void runAutoMode() {
+        System.out.println("=== 자동 모드로 커피 하나 팔기 ===");
+        todayWeather = new Weather(Weather.SUNNY);
+        List<MenuItem> menu = coffeeShop.menuItems;
+        if (!menu.isEmpty()) {
+            List<MenuItem> testOrder = List.of(menu.get(0));
+            coffeeShop.processOrder(testOrder);
+            System.out.println("잔액: " + coffeeShop.money);
+        } else {
+            System.out.println("메뉴가 비어 있어서 주문을 처리할 수 없습니다.");
+        }
+    }
+
+    public void handleOrder() {
+        selectWeather();  // 날씨 선택
+        processPendingDeliveries();  // 배달 처리
+        customerTurn();  // 손님 처리
+        endDay();  // 하루 마감
+    }
 }
 
