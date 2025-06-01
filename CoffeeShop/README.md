@@ -54,7 +54,36 @@ End-of-day summaries include total sales, satisfaction changes, employee wages, 
 > By modeling customer behavior, dynamic weather effects, satisfaction-driven demand, and research upgrades,  
 > it reflects how real-world business logic can be implemented with object-oriented design and clean logic.
 
+---
 
+## ☁️ AWS Deployment (ECS + Fargate)
+
+This project has been containerized with Docker and deployed on AWS using ECS with Fargate launch type.  
+It demonstrates how even a Java console application can be turned into a deployable, cloud-hosted service.
+
+### 🔧 Deployment Steps
+1. Build the Java application and generate `java-2025ver.jar`
+2. Write a `Dockerfile` using the JAR as the entry point
+3. Push Docker image to Amazon ECR
+4. Define ECS Task and run it via Fargate
+5. Monitor logs via CloudWatch
+
+### 📂 Deployment Artifacts
+- `java-2025ver.jar`: Java application JAR file
+- `Dockerfile`: Docker build instructions for ECS deployment
+
+### 🖼 Screenshots
+
+| ECR Image Pushed | Task Definition | Cluster Run | Registry View |
+|------------------|------------------|-------------|----------------|
+| ![](./images/deploy/deploy1.png) | ![](./images/deploy/deploy2.jpg) | ![](./images/deploy/deploy3.jpg) | ![](./images/deploy/deploy4.jpg) |
+
+### 📘 Learnings
+- Experience using AWS IAM, ECS Task Definitions, and Docker tagging
+- Hands-on understanding of cloud resource provisioning and deployment lifecycle
+- CloudWatch-based troubleshooting for container-based apps
+
+---
 
 ## Author
 - GitHub: [kul321](https://github.com/kul321)
