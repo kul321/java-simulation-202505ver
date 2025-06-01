@@ -28,7 +28,7 @@ Each project was designed to:
 
 ## 🧩 Class Diagram
 
-![Class Diagram](./CoffeeShop/screenshots/CoffeeShop_ClassDiagram.png)
+![Class Diagram](./CoffeeShop/images/diagram/CoffeeShop_ClassDiagram.png)
 
 ---
 
