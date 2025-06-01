@@ -88,5 +88,34 @@ It demonstrates how even a Java console application can be turned into a deploya
 
 ---
 
+
+## 🧪 Test
+
+This project includes a test scenario in `CoffeeShopTest.java`, located under the `test/` directory.  
+It is used to verify the core business logic, simulate daily operations, and observe customer behavior automatically.
+
+### 🔍 What It Tests
+- Multiple customer orders and satisfaction reactions
+- Inventory depletion and recipe availability
+- Sales calculation and daily summary
+- Research and upgrade logic simulation
+
+### ▶ How to Run the Test
+1. Navigate to the project root
+2. Compile the test file and related classes:
+```bash
+javac -cp ./CoffeeShop *.java test/CoffeeShopTest.java
+```
+
+3. Run the test:
+```bash
+java -cp ./CoffeeShop test.CoffeeShopTest
+```
+
+> This test simulates a full day (or more) in the coffee shop and helps verify stability before deployment.
+
+---
+
 ## Author
 - GitHub: [kul321](https://github.com/kul321)
+---
