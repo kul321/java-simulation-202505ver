@@ -2,6 +2,9 @@
 
 A console-based simulation of a coffee shop management system built in Java.  
 This project models customer satisfaction, recipe management, weather influence, and research upgrades.
+> ✅ This Java project was packaged as a Docker container and deployed using AWS ECS Fargate.  
+> See deployment screenshots and Dockerfile below!
+
 
 ## ✨ Features
 - Ingredient and Recipe system
