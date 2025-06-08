@@ -12,12 +12,17 @@ This repository showcases multiple Java-based console simulation projects, creat
 | [Energy](./Energy) | ⚡ Turn-based energy transfer and validation simulation between zones and players |
 | [RobotPath](./RobotPath) | 🤖 Simple 2D robot movement and direction simulation |
 | [Student](./Student) | 🎓 Basic student record management system (add, view, delete) |
+| [Apartment](./Apartment) | 🏠 Apartment resident move-in/out and floor transition simulation |
+| [WeaponShop](./WeaponShop) | 🗡️ Weapon shop system with customer stat upgrades and turn-based logic |
 
 ## 🛠 Tech Stack
 
 - Java (JDK 17)
 - Console-based (CLI) interaction
 - IntelliJ IDEA
+- AWS (ECR, ECS Fargate, IAM roles)
+- Docker (Dockerfile, containerization)
+- Kubernetes (Minikube, kubectl)
 
 ## 💡 Purpose
 
