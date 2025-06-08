@@ -31,7 +31,7 @@ Each project was designed to:
 - Improve algorithmic thinking and program structure
 - Practice real-world system modeling through simulation
 
-## 🧩 Class Diagram
+## 🧩 Diagrams
 
 ![CoffeeShop Class Diagram](./CoffeeShop/diagram/CoffeeShop_ClassDiagram.png)
 ![BookStore Class Diagram](./BookStore/diagram/BookStore_ClassDiagram.png)
