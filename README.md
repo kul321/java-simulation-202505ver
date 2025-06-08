@@ -33,7 +33,12 @@ Each project was designed to:
 
 ## 🧩 Class Diagram
 
-![Class Diagram](./CoffeeShop/diagram/CoffeeShop_ClassDiagram.png)
+![CoffeeShop Class Diagram](./CoffeeShop/diagram/CoffeeShop_ClassDiagram.png)
+![BookStore Class Diagram](./BookStore/diagram/BookStore_ClassDiagram.png)
+![CustomizingRPGCharacter Class Diagram](./CustomizingRPGCharacter/diagram/CustomizingRPGCharacter_ClassDiagram.png)
+![Energy Class Diagram](./Energy/diagram/Energy_ClassDiagram.png)
+![RobotPath Class Diagram](./RobotPath/diagram/RobotPath_FlowChart.png)
+![Apartment Class Diagram](./Apartment/diagram/Apartment_ClassDiagram.png)
 
 ---
 
